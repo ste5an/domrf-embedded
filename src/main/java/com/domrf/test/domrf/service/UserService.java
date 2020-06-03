@@ -23,8 +23,8 @@ public class UserService {
         return Lists.newArrayList(userRepository.findAll());
     }
 
-    public User findById(int id) {
-        Optional<User> userOptional = userRepository.findById(id);
+    public User findById(int passportId) {
+        Optional<User> userOptional = userRepository.findById(passportId);
         if (userOptional.isPresent()) {
             return userOptional.get();
         } else throw new RuntimeException("User not found");
@@ -34,11 +34,11 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public void delete(int id) {
-        userRepository.deleteById(id);
+    public void delete(int passportId) {
+        userRepository.deleteById(passportId);
     }
 
-    public void update(User user, int id) {
+    public void update(User user, int passportId) {
         userRepository.save(user);
     }
 

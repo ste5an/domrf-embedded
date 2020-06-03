@@ -4,14 +4,14 @@ import io.swagger.annotations.ApiModelProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
 @RedisHash("user")
 public class User {
     @Id
     @NotNull
     @ApiModelProperty(notes = "passport number of the User")
-    private int id;
+    private int passportId;
     @NotNull
     @ApiModelProperty(notes = "full name of the User")
     private String fullName;
@@ -19,18 +19,18 @@ public class User {
     @ApiModelProperty(notes = "current address of the User")
     private String address;
 
-    public User(Integer id, String fullName, String address) {
-        this.id = id;
+    public User(Integer passportId, String fullName, String address) {
+        this.passportId = passportId;
         this.fullName = fullName;
         this.address = address;
     }
 
-    public int getId() {
-        return id;
+    public int getPassportId() {
+        return passportId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPassportId(int passportId) {
+        this.passportId = passportId;
     }
 
     public String getFullName() {
