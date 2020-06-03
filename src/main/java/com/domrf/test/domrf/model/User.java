@@ -1,5 +1,6 @@
 package com.domrf.test.domrf.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
@@ -9,10 +10,13 @@ import javax.validation.constraints.NotNull;
 public class User {
     @Id
     @NotNull
+    @ApiModelProperty(notes = "passport number of the User")
     private int id;
     @NotNull
+    @ApiModelProperty(notes = "full name of the User")
     private String fullName;
     @NotNull
+    @ApiModelProperty(notes = "current address of the User")
     private String address;
 
     public User(Integer id, String fullName, String address) {
