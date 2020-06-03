@@ -30,8 +30,7 @@ public class UserService {
         } else throw new RuntimeException("User not found");
     }
 
-    public void saveOrUpdate(User user)
-    {
+    public void saveOrUpdate(User user) {
         userRepository.save(user);
     }
 
@@ -39,8 +38,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    public void update(User user, int id)
-    {
+    public void update(User user, int id) {
         userRepository.save(user);
     }
 

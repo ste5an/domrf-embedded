@@ -16,24 +16,24 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/users")
-    private List<User> getAllBooks() {
+    private List<User> getAllUser() {
         return userService.getAllUsers();
     }
 
     @GetMapping("/find/{id}")
-    private User getBooks(@PathVariable("id") int id) {
+    private User getUser(@PathVariable("id") int id) {
         return userService.findById(id);
     }
 
     @PostMapping("/save")
-    private int saveBook(@RequestBody User user)
+    private int saveUser(@RequestBody User user)
     {
         userService.saveOrUpdate(user);
         return user.getId();
     }
 
     @DeleteMapping("/delete/{id}")
-    private void deleteBook(@PathVariable("id") int id) {
+    private void deleteUsers(@PathVariable("id") int id) {
         userService.delete(id);
     }
 
