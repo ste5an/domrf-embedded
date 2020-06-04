@@ -3,11 +3,24 @@ package com.domrf.test.domrf;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+@RunWith(SpringRunner.class)
 @SpringBootTest
-class DomrfApplicationTests {
+public class DomrfApplicationTests {
+
+	@Autowired
+	UserRepository userRepository;
 
 	@Test
-	void contextLoads() {
-	}
+	public void contextLoads() {
+		Integer passportId = Integer.getInteger("");
+		User user = new User(1, "Ivan", "Moscow");
 
+		User saved = userRepository.save(user);
+
+		assertNotNull(saved);
+
+		userRepository.findById(1);
+		Assert.assertEquals(user.getFullName(), "Ivan");
+
+	}
 }
