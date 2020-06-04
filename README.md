@@ -1,12 +1,13 @@
 # domrf-embedded
 
-POSTMAN:
 Репозиторий Docker:
 
 docker pull ste5an/domrf-test-app:domrf
 docker run -it -d ste5an/domrf-test-app:domrf
 docker run -p 8080:8080 ste5an/domrf-test-app:domrf
 
+
+POSTMAN:
 1. POST (save user) - http://localhost:8080/rest/user/save
 { 
 	"passportId": "1234",
