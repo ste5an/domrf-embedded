@@ -9,7 +9,7 @@ docker pull ste5an/domrf-test-app:domrf
 docker run -p 8080:8080 ste5an/domrf-test-app:domrf
 
 SWAGGER - описание Api
-http://localhost:8080//swagger-ui.html
+http://localhost:8080/swagger-ui.html
 
 POSTMAN:
 1. POST (save user) - http://localhost:8080/rest/user/save
