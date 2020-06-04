@@ -1,7 +1,7 @@
 # domrf-embedded
 
 Репозиторий Docker:
-
+Start from Terminal -
 docker pull ste5an/domrf-test-app:domrf
 
 docker run -p 8080:8080 ste5an/domrf-test-app:domrf
