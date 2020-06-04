@@ -3,7 +3,9 @@
 Репозиторий Docker:
 
 docker pull ste5an/domrf-test-app:domrf
+
 docker run -it -d ste5an/domrf-test-app:domrf
+
 docker run -p 8080:8080 ste5an/domrf-test-app:domrf
 
 SWAGGER - описание Api
