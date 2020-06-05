@@ -48,4 +48,13 @@ public class User {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "passportId=" + passportId +
+                ", fullName='" + fullName + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
 }
